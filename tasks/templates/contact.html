@@ -1,6 +1,47 @@
 {% extends 'base.html' %}
 {% block title %}Contact{% endblock %}
 {% block content %}
-<h2>Contact</h2>
-<p>For inquiries, email us at <a href="mailto:support@taskmanager.com">support@taskmanager.com</a>.</p>
+<h2 class="about-title">Contact</h2>
+<p class="about-lead">
+    For any inquiries, feedback, or support, feel free to reach out:
+</p>
+<ul class="about-features">
+    <li>
+        <span class="contact-icon">
+            <!-- Email SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;">
+                <rect width="24" height="24" rx="5" fill="#1976d2" />
+                <path d="M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2zm2 0l6 5 6-5"
+                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </span>
+        <a href="mailto:support@taskmanager.com">support@taskmanager.com</a>
+    </li>
+    <li>
+        <span class="contact-icon">
+            <!-- GitHub SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;">
+                <circle cx="12" cy="12" r="12" fill="#22223b" />
+                <path fill="#fff"
+                    d="M12 5.5c-3.6 0-6.5 2.9-6.5 6.5 0 2.9 1.9 5.3 4.5 6.2.3.1.4-.1.4-.3v-1.2c-1.8.4-2.2-.8-2.2-.8-.3-.7-.7-.9-.7-.9-.6-.4 0-.4 0-.4.7 0 1 .7 1 .7.6 1 1.6.7 2 .5.1-.4.2-.7.4-.9-1.4-.2-2.8-.7-2.8-3.1 0-.7.2-1.2.6-1.7 0-.2-.2-.7.1-1.4 0 0 .5-.2 1.7.7.5-.1 1-.2 1.5-.2s1 .1 1.5.2c1.2-.9 1.7-.7 1.7-.7.3.7.1 1.2.1 1.4.4.5.6 1 .6 1.7 0 2.4-1.4 2.9-2.8 3.1.2.2.4.5.4 1v1.5c0 .2.1.4.4.3 2.6-.9 4.5-3.3 4.5-6.2 0-3.6-2.9-6.5-6.5-6.5z" />
+            </svg>
+        </span>
+        <a href="https://github.com/thedeveloperaman/TaskManager" target="_blank">thedeveloperaman/TaskManager</a>
+    </li>
+    <li>
+        <span class="contact-icon">
+            <!-- LinkedIn SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;">
+                <rect width="24" height="24" rx="5" fill="#0A66C2" />
+                <path
+                    d="M7.5 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1.25 2h2.5v7h-2.5v-7zm4 0h2.4v1h.03c.33-.63 1.13-1.3 2.32-1.3 2.48 0 2.94 1.63 2.94 3.75v3.55h-2.5v-3.15c0-.75-.01-1.7-1.04-1.7-1.04 0-1.2.81-1.2 1.64v3.21h-2.5v-7z"
+                    fill="#fff" />
+            </svg>
+        </span>
+        <a href="https://www.linkedin.com/in/thedeveloperaman/" target="_blank">thedeveloperaman</a>
+    </li>
+</ul>
+<p class="about-desc">
+    We value your feedback and aim to respond as quickly as possible.
+</p>
 {% endblock %}

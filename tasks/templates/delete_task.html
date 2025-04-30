@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}Delete Task{% endblock %}
 {% block content %}
-<div class="page-container" style="display: flex; flex-direction: column; align-items: center;">
+<div class="page-container">
     <h2 class="page-title" style="text-align: center; width: 100%;">Delete Task</h2>
-    <form method="post" class="auth-form" style="width: 100%; max-width: 400px; text-align: center;">
+    <form method="post" class="auth-form" style="width: 100%; max-width: 400px; margin: 0 auto; text-align: center;">
         {% csrf_token %}
         <div style="width:100%;justify-content:center;text-align:center;margin-bottom:24px;">
             <span style="font-size:1.1em;">Are you sure?</span><br>
-            <span style="display:inline-block;margin-top:8px;;font-size:1.05em;font-style:italic;">
+            <span class="delete-task-title">
                 "{{ task.title }}"
             </span>
         </div>

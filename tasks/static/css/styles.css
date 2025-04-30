@@ -429,3 +429,137 @@ footer.footer p {
     opacity: 0.95;
     text-shadow: 0 1px 0 #22223b, 0 2px 8px #22223b;
 }
+
+/* About Page Styling */
+.about-title {
+    color: #22223b;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.about-lead {
+    font-size: 1.13em;
+    color: #333;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.about-features {
+    margin: 0 0 22px 22px;
+    color: #444;
+    font-size: 1.05em;
+    line-height: 1.8;
+    max-width: 600px;
+    padding: 0;
+    list-style: disc;
+    background: none;
+    border: none;
+}
+
+.about-features li {
+    margin-bottom: 8px;
+    background: none;
+    border: none;
+    padding: 0 0 0 2px;
+}
+
+.about-tech {
+    margin-top: 18px;
+    font-size: 1.04em;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-tech-label {
+    font-weight: 600;
+    color: #22223b;
+    margin-right: 6px;
+}
+
+.about-tech-icon {
+    display: inline-block;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: transform 0.15s;
+    vertical-align: middle;
+}
+.about-tech-icon:last-child {
+    margin-right: 0;
+}
+.about-tech-icon:hover {
+    transform: scale(1.13);
+}
+
+.about-capsule-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-capsule-row {
+    display: inline-flex;
+    gap: 8px;
+    vertical-align: middle;
+}
+
+.about-cat {
+    font-weight: 600;
+    padding: 2px 14px;
+    border-radius: 999px;
+    font-size: 0.98em;
+    color: #fff;
+    display: inline-block;
+    min-width: 0;
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.07);
+}
+
+.about-cat-work {
+    background: #1976d2;
+}
+.about-cat-personal {
+    background: #8e24aa;
+}
+.about-cat-shopping {
+    background: #43a047;
+}
+.about-cat-study {
+    background: #fbc02d;
+    color: #22223b;
+}
+.about-cat-other {
+    background: #757575;
+}
+
+.contact-icon {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.about-tech-icon svg,
+.contact-icon svg {
+    width: 30px !important;
+    height: 30px !important;
+    vertical-align: middle;
+}
+
+.delete-task-title {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 1.05em;
+    font-style: italic;
+    max-width: 95%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+}

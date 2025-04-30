@@ -1,6 +1,62 @@
 {% extends 'base.html' %}
 {% block title %}About{% endblock %}
 {% block content %}
-<h2>About</h2>
-<p>This is a simple Task Manager application built with Django.</p>
+<h2 class="about-title">About Task Manager</h2>
+<p class="about-lead">
+    <strong>Task Manager</strong> is a modern, user-friendly web application built with Django to help you organize,
+    track, and manage your daily tasks efficiently.
+</p>
+<ul class="about-features">
+    <li>Create, edit, and delete tasks with ease</li>
+    <li>Mark tasks as complete or incomplete</li>
+    <li>
+        <span class="about-capsule-inline">
+            Categorize tasks:
+            <span class="about-capsule-row">
+                <span class="about-cat about-cat-work">Work</span>
+                <span class="about-cat about-cat-personal">Personal</span>
+                <span class="about-cat about-cat-shopping">Shopping</span>
+                <span class="about-cat about-cat-study">Study</span>
+                <span class="about-cat about-cat-other">Other</span>
+            </span>
+        </span>
+    </li>
+    <li>Register and securely log in to manage your personal task list</li>
+    <li>Modern, responsive, and intuitive interface</li>
+</ul>
+<p class="about-desc">
+    This project is open source and intended for learning, productivity, and as a foundation for more advanced task
+    management solutions.
+</p>
+<div class="about-tech">
+    <span class="about-tech-label">Technologies used:</span>
+    <span class="about-tech-icon" title="Django">
+        <!-- Django SVG -->
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;">
+            <ellipse cx="16" cy="16" rx="12" ry="14" fill="#092E20" />
+            <text x="16" y="21" text-anchor="middle" font-size="11" fill="#fff" font-family="Arial"
+                font-weight="bold">Dj</text>
+        </svg>
+    </span>
+    <span class="about-tech-icon" title="HTML5">
+        <!-- HTML5 SVG -->
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;">
+            <path d="M5 4l2.2 24L16 28l8.8-4L27 4H5z" fill="#E44D26" />
+            <path d="M16 26.1l7.1-2.9L24.7 6H16v20.1z" fill="#F16529" />
+            <path d="M16 13.3h-3.2l-.2-2.2H16V9.1h-5.2l.5 6.1H16v-1.9zm0 5.1h-2.7l-.2-2.2H16v-1.9h-5.1l.5 6.1H16v-2z"
+                fill="#fff" />
+            <path d="M16 13.3v1.9h2.7l-.2 2.2H16v2h4.6l.5-6.1H16v1.9zm0-4.2v2.2h3.2l.2-2.2H16z" fill="#EBEBEB" />
+        </svg>
+    </span>
+    <span class="about-tech-icon" title="CSS3">
+        <!-- CSS3 SVG -->
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;">
+            <path d="M5 4l2.2 24L16 28l8.8-4L27 4H5z" fill="#1572B6" />
+            <path d="M16 26.1l7.1-2.9L24.7 6H16v20.1z" fill="#33A9DC" />
+            <path d="M16 13.3h-3.2l-.2-2.2H16V9.1h-5.2l.5 6.1H16v-1.9zm0 5.1h-2.7l-.2-2.2H16v-1.9h-5.1l.5 6.1H16v-2z"
+                fill="#fff" />
+            <path d="M16 13.3v1.9h2.7l-.2 2.2H16v2h4.6l.5-6.1H16v1.9zm0-4.2v2.2h3.2l.2-2.2H16z" fill="#EBEBEB" />
+        </svg>
+    </span>
+</div>
 {% endblock %}
