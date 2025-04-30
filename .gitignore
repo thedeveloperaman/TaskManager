@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+db.sqlite3
+*.sqlite3
+/media
+/staticfiles
+/static_root
+.env
+.env.*
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Migrations (optional: keep if you want to version them)
+# Uncomment the next line to ignore all migrations
+# */migrations/
+
+# Logs
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+
+# mypy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Other
+*.swp
+*.swo

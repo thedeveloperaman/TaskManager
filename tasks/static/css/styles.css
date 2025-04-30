@@ -1,0 +1,431 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background: #fff;
+    padding: 40px 32px 32px 32px;
+    border-radius: 18px;
+    max-width: 650px;
+    margin: 48px auto 24px auto;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+}
+
+h1 {
+    color: #22223b;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+form[method="post"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], select[name="category"] {
+    padding: 12px 16px;
+    border: 1.5px solid #c9ada7;
+    border-radius: 8px;
+    font-size: 1.08em;
+    outline: none;
+    transition: border 0.2s;
+    background: #f8f8fa;
+}
+
+input[type="text"]:focus, select[name="category"]:focus {
+    border: 2px solid #4a4e69;
+}
+
+button, .btn {
+    background: #4a4e69;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1.08em;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.09);
+    font-weight: 600;
+}
+
+button:hover, .btn:hover {
+    background: #22223b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 20px 0;
+    background: #f7f8fa; /* subtle, elegant contrast background */
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.09);
+    padding: 18px 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: box-shadow 0.2s, background 0.2s;
+    position: relative;
+}
+
+li:hover {
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.17);
+    background: #eef1f6; /* slightly more contrast on hover */
+}
+
+.navbar {
+    background: #22223b;
+    padding: 18px 0;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.navbar-left {
+    margin-left: 32px;
+}
+
+.navbar-right {
+    margin-right: 32px;
+}
+
+.navbar a {
+    color: #f2e9e4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.13em;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    padding: 0 8px;
+}
+
+.navbar a:hover {
+    color: #9a8c98;
+    text-decoration: underline;
+}
+
+.task-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 38px;
+    position: relative;
+    gap: 0;
+}
+
+.task-toggle-area {
+    flex: 0 0 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 48px;
+    max-width: 48px;
+    padding-left: 10px;
+    z-index: 1;
+    height: 100%;
+    margin-top: 2px;
+}
+
+.task-content-area {
+    flex: 1 1 0;
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 0 12px;
+    overflow: visible;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task-title {
+    font-size: 1.08em;
+    font-weight: 500;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    text-overflow: unset;
+    width: 100%;
+    color: #22223b;
+    padding: 0;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+span[style*="line-through"] {
+    color: #b5b5b5;
+}
+
+.action-icons {
+    flex: 0 0 68px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 12px;
+    min-width: 68px;
+    max-width: 68px;
+    padding-right: 10px;
+    z-index: 1;
+    height: 38px;
+    margin-top: 2px;
+}
+
+.action-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 50%;
+    transition: background 0.18s, transform 0.13s;
+}
+
+.action-icon-link svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+    transition: filter 0.18s, transform 0.13s;
+}
+
+.action-icon-link.edit:hover {
+    background: #e3eafc;
+    transform: scale(1.18) rotate(-8deg);
+    box-shadow: 0 2px 8px #1976d233;
+}
+.action-icon-link.delete:hover {
+    background: #fdeaea;
+    transform: scale(1.18) rotate(8deg);
+    box-shadow: 0 2px 8px #d32f2f33;
+}
+
+.task-category-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 28px;
+    margin-top: 6px;
+    padding-left: 70px;
+    box-sizing: border-box;
+}
+
+.category-capsule {
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 999px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    color: #fff;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+    text-align: center;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 0;
+}
+
+.category-work {
+    background: #1976d2;
+}
+.category-personal {
+    background: #8e24aa;
+}
+.category-shopping {
+    background: #43a047;
+}
+.category-study {
+    background: #fbc02d;
+    color: #22223b;
+}
+.category-other {
+    background: #757575;
+}
+
+/* Auth and action pages container styling */
+.auth-page .container,
+.action-page .container {
+    max-width: 440px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+    padding: 36px 38px 28px 38px;
+    margin: 48px auto 24px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Auth form improvements */
+.auth-form {
+    width: 100%;
+}
+
+.auth-form p {
+    width: 100%;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.auth-form label {
+    flex: 0 0 80px; /* reduced from 120px */
+    font-weight: 500;
+    color: #22223b;
+    font-size: 0.95em;
+    text-align: right;
+}
+
+.auth-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1.5px solid #c9ada7;
+    border-radius: 8px;
+    font-size: 1.08em;
+    box-sizing: border-box;
+}
+
+.auth-form select {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1.5px solid #c9ada7;
+    border-radius: 8px;
+    font-size: 1.08em;
+    background: #f8f8fa;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+/* Hide Django's default helptext */
+.auth-form .helptext {
+    display: none;
+}
+
+/* Responsive: stack label and input on small screens */
+@media (max-width: 500px) {
+    .auth-form p {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+    .auth-form label {
+        text-align: left;
+        margin-bottom: 2px;
+    }
+}
+
+.page-actions {
+    margin-top: 22px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.page-actions .btn {
+    min-width: 120px;
+}
+
+.btn-secondary {
+    background: #e0eafc;
+    color: #22223b !important;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: #cfdef3;
+    color: #22223b !important;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff !important;
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .container {
+        padding: 18px 4vw;
+        max-width: 98vw;
+    }
+    li {
+        padding: 12px 0 8px 0;
+    }
+    .task-row {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .task-content-area {
+        padding: 0 6px;
+    }
+    .action-icons {
+        padding-right: 4px;
+    }
+    .task-toggle-area {
+        padding-left: 4px;
+    }
+}
+
+footer.footer {
+    width: 100%;
+    text-align: center;
+    color: #f2e9e4;
+    margin-top: auto;
+    background: #22223b;
+    padding: 22px 0 10px 0;
+    font-size: 1.08em;
+    letter-spacing: 1.1px;
+    font-weight: 500;
+    border-top: 1.5px solid #e0eafc;
+    box-shadow: 0 -2px 16px 0 rgba(44, 62, 80, 0.06);
+    position: relative;
+}
+
+footer.footer p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.08em;
+    letter-spacing: 1.1px;
+    font-weight: 500;
+    opacity: 0.95;
+    text-shadow: 0 1px 0 #22223b, 0 2px 8px #22223b;
+}

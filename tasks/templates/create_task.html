@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Create Task{% endblock %}
+{% block content %}
+<div class="page-container" style="display: flex; flex-direction: column; align-items: center;">
+    <h2 class="page-title" style="text-align: center; width: 100%;">Create Task</h2>
+    <form method="post" class="auth-form" style="width: 100%; max-width: 400px;">
+        {% csrf_token %}
+        <p>
+            {{ form.title.errors }}
+            <label for="{{ form.title.id_for_label }}">Title</label>
+            {{ form.title }}
+        </p>
+        <p>
+            {{ form.category.errors }}
+            <label for="{{ form.category.id_for_label }}">Category</label>
+            {{ form.category }}
+        </p>
+        <div class="page-actions">
+            <button type="submit" class="btn">Create</button>
+            <a href="{% url 'tasks:home' %}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

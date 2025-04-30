@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h2>Login</h2>
+<form method="post" class="auth-form">
+    {% csrf_token %}
+    <p>
+        {{ form.username.errors }}
+        <label for="id_username">Username</label>
+        <input type="text" name="username" id="id_username" placeholder="Enter your username" required>
+    </p>
+    <p>
+        {{ form.password.errors }}
+        <label for="id_password">Password</label>
+        <input type="password" name="password" id="id_password" placeholder="Enter your password" required>
+    </p>
+    <button type="submit" class="btn auth-btn">Login</button>
+</form>
+<div class="auth-alt">
+    <span>Don't have an account?</span>
+    <a href="{% url 'tasks:register' %}" class="btn auth-btn-alt">Register</a>
+</div>
+{% endblock %}
